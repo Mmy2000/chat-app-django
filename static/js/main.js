@@ -219,17 +219,17 @@ chatSubmitElement.onclick = function(e) {
 }
 
 
-// chatInputElement.onkeyup = function(e) {
-//     if (e.keyCode == 13) {
-//         sendMessage()
-//     }
-// }
+chatInputElement.onkeyup = function(e) {
+    if (e.keyCode == 13) {
+        sendMessage()
+    }
+}
 
 
-// chatInputElement.onfocus = function(e) {
-//     chatSocket.send(JSON.stringify({
-//         'type': 'update',
-//         'message': 'writing_active',
-//         'name': chatName
-//     }))
-// }
+chatInputElement.onfocus = function(e) {
+    chatSocket.send(JSON.stringify({
+        'type': 'update',
+        'message': 'writing_active',
+        'name': chatName
+    }))
+}
