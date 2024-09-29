@@ -1,4 +1,3 @@
-
 /**
  * Variables
  */
@@ -173,7 +172,7 @@ async function joinChatRoom() {
     chatSocket.onopen = function(e) {
         console.log('onOpen - chat socket was opened')
 
-       scrollToBottom()
+        scrollToBottom()
     }
 
 
