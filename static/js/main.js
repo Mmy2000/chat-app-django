@@ -160,27 +160,27 @@ async function joinChatRoom() {
     })
 
 
-    // chatSocket = new WebSocket(`ws://${window.location.host}/ws/${chatRoomUuid}/`)
+    chatSocket = new WebSocket(`ws://${window.location.host}/ws/${chatRoomUuid}/`)
 
 
-    // chatSocket.onmessage = function(e) {
-    //     console.log('onMessage')
+    chatSocket.onmessage = function(e) {
+        console.log('onMessage')
 
-    //     onChatMessage(JSON.parse(e.data))
-    // }
-
-
-    // chatSocket.onopen = function(e) {
-    //     console.log('onOpen - chat socket was opened')
-
-    //     scrollToBottom()
-    // }
+        //onChatMessage(JSON.parse(e.data))
+    }
 
 
-    // chatSocket.onclose = function(e) {
+    chatSocket.onopen = function(e) {
+        console.log('onOpen - chat socket was opened')
 
-    //     console.log('onClose - chat socket was closed')
-    // }
+       // scrollToBottom()
+    }
+
+
+    chatSocket.onclose = function(e) {
+
+        console.log('onClose - chat socket was closed')
+    }
 }
 
 
