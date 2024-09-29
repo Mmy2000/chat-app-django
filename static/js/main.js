@@ -55,15 +55,15 @@ function getCookie(name) {
 }
 
 
-// function sendMessage() {
-//     chatSocket.send(JSON.stringify({
-//         'type': 'message',
-//         'message': chatInputElement.value,
-//         'name': chatName
-//     }))
+function sendMessage() {
+    chatSocket.send(JSON.stringify({
+        'type': 'message',
+        'message': chatInputElement.value,
+        'name': chatName
+    }))
 
-//     chatInputElement.value = ''
-// }
+    chatInputElement.value = ''
+}
 
 
 // function onChatMessage(data) {
@@ -210,13 +210,13 @@ chatJoinElement.onclick = function(e) {
 }
 
 
-// chatSubmitElement.onclick = function(e) {
-//     e.preventDefault()
+chatSubmitElement.onclick = function(e) {
+    e.preventDefault()
 
-//     sendMessage()
+    sendMessage()
 
-//     return false
-// }
+    return false
+}
 
 
 // chatInputElement.onkeyup = function(e) {
